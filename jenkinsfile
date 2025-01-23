@@ -1,4 +1,11 @@
-node {
-    checkout scm
-    /* .. snip .. */
+pipeline{
+agent any{
+    stages{
+        stage("checkout from Github"){
+             steps{
+                        echo "Checking out from Github"
+             }
+        }
+    }
+}
 }
