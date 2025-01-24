@@ -1,0 +1,13 @@
+pipeline{
+agent any{
+    stages{
+        stage("checkout from Github"){
+             steps{
+                        echo 'Checking out code from Git repository...'
+                        git credentialsId: 'c9bab070-86ee-4fd3-adcc-4391e5607ff7', url: 'https://github.com/rajavd07github/jenkins/blob/master/jenkinsfile'
+                       //
+             }
+        }
+    }
+}
+}
